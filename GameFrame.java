@@ -8,7 +8,7 @@ public class GameFrame extends JFrame{
 	
 	GameFrame(){
 		panel = new GamePanel();//instantiating instance into game frame constructor   
-		this.add(panel);
+		this.add(panel);//This is for adding the game panel to the frame.
 		this.setTitle("Pong Game");//for title	
 		this.setResizable(false);//So that the user cannot resize the window
 		this.setBackground(Color.black);//to set the background colour of the game to black	
