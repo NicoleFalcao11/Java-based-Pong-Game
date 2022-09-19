@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-import javax.swing.*; //1:00:40
+import javax.swing.*;
 
 public class Score extends Rectangle {
 
@@ -18,12 +18,12 @@ public class Score extends Rectangle {
     
 public void draw(Graphics g) {
     g.setColor(Color.white);
-    g.setFont(new Font("Consolas",Font.PLAIN,60));
+    g.setFont(new Font("Consolas",Font.PLAIN,60)); //font & size of the score
 
-    g.drawLine(GAME_WIDTH/2, 0, GAME_WIDTH/2, GAME_HEIGHT);
+    g.drawLine(GAME_WIDTH/2, 0, GAME_WIDTH/2, GAME_HEIGHT); //draws vertical line in middle
 
-    g.drawString(String.valueOf(player1/10)+ String.valueOf(player1%10), (GAME_WIDTH/2)-85, 50);
-    g.drawString(String.valueOf(player2/10)+String.valueOf(player2%10), (GAME_WIDTH/2)+20, 50);
+    g.drawString(String.valueOf(player1/10)+ String.valueOf(player1%10), (GAME_WIDTH/2)-85, 50); //double digit score of player 1
+    g.drawString(String.valueOf(player2/10)+String.valueOf(player2%10), (GAME_WIDTH/2)+20, 50); //double digit score of player 2
 
 }
 
