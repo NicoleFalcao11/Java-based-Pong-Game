@@ -8,19 +8,19 @@ public class Ball extends Rectangle {
     Random random;
     int xVelocity;
     int yVelocity;
-    int initialSpeed = 2;
+    int initialSpeed = 2; //speed of the ball
 
     Ball(int x, int y, int width, int height) {
-        super(x,y,width,height);
-        random = new Random();
+        super(x,y,width,height); //calls constructor of parent class
+        random = new Random(); // new ball emerges from random direction 
         int randomXDirection = random.nextInt(2);
         if (randomXDirection == 0)
-        randomXDirection--;
+        randomXDirection--; //ball moves towards left
         setXDirection(randomXDirection*initialSpeed);
 
         int randomYDirection = random.nextInt(2);
         if (randomYDirection == 0)
-        randomYDirection--;
+        randomYDirection--; //ball moves towards left
         setYDirection(randomYDirection*initialSpeed);
 }
 
