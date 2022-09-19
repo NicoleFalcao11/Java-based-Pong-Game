@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-import javax.swing.*; //43:55
+import javax.swing.*; 
 
 public class Ball extends Rectangle {
 
