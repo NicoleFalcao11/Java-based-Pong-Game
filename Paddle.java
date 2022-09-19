@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-import javax.swing.*; //30:48
+import javax.swing.*; 
 
 public class Paddle extends Rectangle {
 
