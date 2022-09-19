@@ -5,14 +5,14 @@ import javax.swing.*; //30:48
 
 public class Paddle extends Rectangle {
 
-    int id;
-    int yVelocity;
+    int id; // player 1 or 2
+    int yVelocity; //speed of the paddle 
     int speed=10;
 
     Paddle(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT, int id) {
 
-        super(x,y,PADDLE_WIDTH,PADDLE_HEIGHT);
-        this.id=id;
+        super(x,y,PADDLE_WIDTH,PADDLE_HEIGHT); //calls constructor of the parent class
+        this.id=id; //player 1 or 2
 
     }
 
@@ -20,24 +20,24 @@ public class Paddle extends Rectangle {
 
         switch (id) {
 
-            case 1:
+            case 1: // player 1
             if(e.getKeyCode()==KeyEvent.VK_W) {
-                setYDirection(-speed);
+                setYDirection(-speed); //W moves paddle 1 upwards by 10 pixels
                 move();
             }
             if(e.getKeyCode()==KeyEvent.VK_S) {
-                setYDirection(speed);
+                setYDirection(speed); //S moves paddle 1 downwards by 10 pixels
                 move();
             }
             break;
 
             case 2:
             if(e.getKeyCode()==KeyEvent.VK_UP) {
-                setYDirection(-speed);
+                setYDirection(-speed); //UP moves paddle 2 upwards by 10 pixels
                 move();
             }
             if(e.getKeyCode()==KeyEvent.VK_DOWN) {
-                setYDirection(speed);
+                setYDirection(speed); //DOWN moves paddle 2 downwards by 10 pixels
                 move();
             }
             break;
@@ -50,22 +50,22 @@ public class Paddle extends Rectangle {
 
             case 1:
             if(e.getKeyCode()==KeyEvent.VK_W) {
-                setYDirection(0);
+                setYDirection(0); // 0 makes paddle stop moving
                 move();
             }
             if(e.getKeyCode()==KeyEvent.VK_S) {
-                setYDirection(0);
+                setYDirection(0);  // 0 makes paddle stop moving
                 move();
             }
             break;
 
             case 2:
             if(e.getKeyCode()==KeyEvent.VK_UP) {
-                setYDirection(0);
+                setYDirection(0); // 0 makes paddle stop moving
                 move();
             }
             if(e.getKeyCode()==KeyEvent.VK_DOWN) {
-                setYDirection(0);
+                setYDirection(0); // 0 makes paddle stop moving
                 move();
             }
             break;
@@ -75,7 +75,7 @@ public class Paddle extends Rectangle {
 
     public void setYDirection(int yDirection) {
 
-        yVelocity=yDirection;
+        yVelocity=yDirection; 
 
     }
 
