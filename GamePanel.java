@@ -10,6 +10,8 @@ public class GamePanel extends JPanel implements Runnable{
     static final int BALL_DIAMETER =20;
     static final int PADDLE_WIDTH = 25;
     static final int PADDLE_HEIGHT = 100;
+    static final int MAX_SCORE = 10;
+	static boolean gameRun = true;
     //objects of the respective classes 
     Thread gameThread;//thread class
     Image image;// Image superclass from java.awt used for Image representation 
@@ -168,4 +170,44 @@ public class GamePanel extends JPanel implements Runnable{
         }
 
     }
-}  
+    
+    public void player2() 
+{ 
+if(ball.x <=0) {
+    score.player2++;
+if(score.player2 < MAX_SCORE)
+{
+    System.out.println("Player 2 Wins");
+    newPaddles();
+    newBall();
+}
+else
+{
+    gameRun = false;
+}
+  }
+
+}
+
+
+public void player1() 
+{ 
+if(ball.x <=0) {
+    score.player1++;
+if(score.player1 < MAX_SCORE)
+{
+    System.out.println("Player 1 Wins");
+    newPaddles();
+    newBall();
+}
+else
+{
+    gameRun = false;
+}
+  }
+
+}
+
+}
+
+  
