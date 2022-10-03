@@ -8,6 +8,7 @@ public class Paddle extends Rectangle {
     int id; // player 1 or 2
     int yVelocity; //speed of the paddle 
     int speed=10;
+    public static boolean stop = false;
 
     Paddle(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT, int id) {
 
